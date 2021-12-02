@@ -1,0 +1,58 @@
+0 verbose cli [
+0 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+0 verbose cli   'C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+0 verbose cli   'view',
+0 verbose cli   '--json',
+0 verbose cli   'react-native',
+0 verbose cli   'description',
+0 verbose cli   'dist-tags.latest',
+0 verbose cli   'homepage',
+0 verbose cli   'version'
+0 verbose cli ]
+1 info using npm@8.1.2
+2 info using node@v16.13.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:C:\Users\user\AppData\Roaming\npm\node_modules\npm\npmrc Completed in 2ms
+6 timing config:load:builtin Completed in 2ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:file:c:\Users\user\Desktop\BlogApp\.npmrc Completed in 0ms
+10 timing config:load:project Completed in 2ms
+11 timing config:load:file:C:\Users\user\.npmrc Completed in 0ms
+12 timing config:load:user Completed in 0ms
+13 timing config:load:file:C:\Users\user\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+14 timing config:load:global Completed in 1ms
+15 timing config:load:validate Completed in 0ms
+16 timing config:load:credentials Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 11ms
+19 timing npm:load:configload Completed in 12ms
+20 timing npm:load:setTitle Completed in 0ms
+21 timing npm:load:setupLog Completed in 1ms
+22 timing config:load:flatten Completed in 3ms
+23 timing npm:load:cleanupLog Completed in 3ms
+24 timing npm:load:configScope Completed in 0ms
+25 timing npm:load:projectScope Completed in 1ms
+26 timing npm:load Completed in 20ms
+27 timing command:view Completed in 322034ms
+28 verbose type system
+29 verbose stack FetchError: Invalid response body while trying to fetch https://registry.npmjs.org/react-native: Socket timeout
+29 verbose stack     at C:\Users\user\AppData\Roaming\npm\node_modules\npm\node_modules\minipass-fetch\lib\body.js:162:15
+29 verbose stack     at processTicksAndRejections (node:internal/process/task_queues:96:5)
+29 verbose stack     at async View.getData (C:\Users\user\AppData\Roaming\npm\node_modules\npm\lib\view.js:210:20)
+29 verbose stack     at async View.view (C:\Users\user\AppData\Roaming\npm\node_modules\npm\lib\view.js:124:28)
+30 verbose cwd c:\Users\user\Desktop\BlogApp
+31 verbose Windows_NT 10.0.19042
+32 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\user\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "view" "--json" "react-native" "description" "dist-tags.latest" "homepage" "version"
+33 verbose node v16.13.0
+34 verbose npm  v8.1.2
+35 error code ERR_SOCKET_TIMEOUT
+36 error errno ERR_SOCKET_TIMEOUT
+37 error network Invalid response body while trying to fetch https://registry.npmjs.org/react-native: Socket timeout
+38 error network This is a problem related to network connectivity.
+38 error network In most cases you are behind a proxy or have bad network settings.
+38 error network
+38 error network If you are behind a proxy, please make sure that the
+38 error network 'proxy' config is set properly.  See: 'npm help config'
+39 verbose exit 1

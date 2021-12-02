@@ -1,0 +1,81 @@
+# npm resolution error report
+
+2021-11-22T10:48:56.319Z
+
+While resolving: blogapp@1.0.0
+Found: react-native@0.64.3
+node_modules/react-native
+  react-native@"0.64.3" from the root project
+
+Could not resolve dependency:
+peer react-native@"<0.63.2" from react-native-fix-image@2.1.0
+node_modules/react-native-fix-image
+  react-native-fix-image@"*" from the root project
+
+Fix the upstream dependency conflict, or retry
+this command with --force, or --legacy-peer-deps
+to accept an incorrect (and potentially broken) dependency resolution.
+
+Raw JSON explanation object:
+
+{
+  "code": "ERESOLVE",
+  "current": {
+    "name": "react-native",
+    "version": "0.64.3",
+    "whileInstalling": {
+      "name": "blogapp",
+      "version": "1.0.0",
+      "path": "C:\\Users\\user\\Desktop\\BlogApp"
+    },
+    "location": "node_modules/react-native",
+    "isWorkspace": false,
+    "dependents": [
+      {
+        "type": "prod",
+        "name": "react-native",
+        "spec": "0.64.3",
+        "from": {
+          "location": "C:\\Users\\user\\Desktop\\BlogApp"
+        }
+      }
+    ]
+  },
+  "currentEdge": {
+    "type": "prod",
+    "name": "react-native",
+    "spec": "0.64.3",
+    "from": {
+      "location": "C:\\Users\\user\\Desktop\\BlogApp"
+    }
+  },
+  "edge": {
+    "type": "peer",
+    "name": "react-native",
+    "spec": "<0.63.2",
+    "error": "INVALID",
+    "from": {
+      "name": "react-native-fix-image",
+      "version": "2.1.0",
+      "whileInstalling": {
+        "name": "blogapp",
+        "version": "1.0.0",
+        "path": "C:\\Users\\user\\Desktop\\BlogApp"
+      },
+      "location": "node_modules/react-native-fix-image",
+      "isWorkspace": false,
+      "dependents": [
+        {
+          "type": "prod",
+          "name": "react-native-fix-image",
+          "spec": "*",
+          "from": {
+            "location": "C:\\Users\\user\\Desktop\\BlogApp"
+          }
+        }
+      ]
+    }
+  },
+  "strictPeerDeps": false,
+  "force": false
+}
