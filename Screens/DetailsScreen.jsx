@@ -1,5 +1,5 @@
 import React from "react";
-import NewsList from "./NewsList";
+import NewsList from "../NewsList";
 import { Entypo } from '@expo/vector-icons';
 import { View, Text, SafeAreaView, StyleSheet, Image, ImageBackground,ScrollView, Dimensions} from "react-native";
 
@@ -12,7 +12,7 @@ const Details = ({route, navigation}) =>{
                     {NewsList.filter((item)=> item.id === ItemId).map((item)=>{
                         return( 
                             <View key={item.id} style={{height: Dimensions.get('screen').height,}}>
-                                <Entypo name="chevron-thin-left" size={26} color="black" style={styles.back_btn} onPress={()=>navigation.navigate('index')}/>
+                                <Entypo name="chevron-thin-left" size={26} color="black" style={styles.back_btn} onPress={()=>navigation.navigate('home')}/>
                                 <View style={styles.d_image}>
                                     <ImageBackground  source={item.avator} style={styles.d_bg} />
                                 </View>
@@ -28,7 +28,6 @@ const Details = ({route, navigation}) =>{
                             </View>
                         )
                     })}
-                    <Text>Item id: {ItemId}</Text>
                 </View>  
             </ScrollView>
         </SafeAreaView>

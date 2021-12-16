@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, FlatList, Image, Button, SafeAreaView, TouchableOpacity,} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import Footer from "./Footer";
-import NewsList from "./NewsList";
+import Footer from "../Components/Footer";
+import NewsList from "../NewsList";
 
 const itemSeparator = () => <View style={{height: 10,}}></View>
 
-const Index = ({navigation}) =>{
+const HomeScreen= ({navigation}) =>{
     return(
         <SafeAreaView style={{flex: 1, marginHorizontal: 20, alignItems: 'center', height: "100%"}}>
             <View style={styles.main_section}>
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
         color: "#333",
     },
 })
-export default Index;
+export default HomeScreen;

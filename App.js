@@ -3,11 +3,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Index from './Index';
 import News from './News';
 import Adverts from "./Adverts";
-import Details from './Details';
-import NavBar from './NavBar';
+import NavBar from './Components/NavBar';
+import HomeScreen from './Screens/HomeScreen';
+import DetailsScreen from './Screens/DetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,9 +19,9 @@ export default function App() {
       <Adverts />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="home" screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="index" component={Index}/>
+          <Stack.Screen name="home" component={HomeScreen}/>
           <Stack.Screen name="news" component={News}/>
-          <Stack.Screen name="details" component={Details}/>
+          <Stack.Screen name="details" component={DetailsScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
     </View>
