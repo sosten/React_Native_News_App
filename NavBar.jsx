@@ -1,14 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView, Button } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView, } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 const NavBar = ({navigation}) =>{
     return(
-        <SafeAreaView style={{backgroundColor: "#999", flexDirection:"row",  marginTop: 50, alignItems:"center"}}>
+        <SafeAreaView style={{backgroundColor: "#999", flexDirection:"row",  marginTop: 25, alignItems:"center"}} contentContainerStyle={{flexGrow: 1}}>
             <View style={styles.nav_wrapper}>
-                <Text><Icon name="bars" size={30} style={{color:"#fff",}} /></Text>
-                <Text style={{fontSize: 30, fontWeight:"700", color: "#fff",}}>Tinveleko News</Text>
-                <Text><Icon name="user" size={30} style={{color:"#fff",}} /></Text>
+                <Text><Icon name="bars" size={25} style={{color:"#fff",}} /></Text>
+                <Text style={{fontSize: 26, fontWeight:"700", color: "#fff",}}>Tinveleko News</Text>
+                <Text><Icon name="user" size={25} style={{color:"#fff",}} /></Text>
             </View>
         </SafeAreaView>
     )

@@ -18,8 +18,8 @@ export default function App() {
       <NavBar />
       <Adverts />
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="home" options={{ headerShown: false }}>
-          <Stack.Screen name="home" component={Index}/>
+        <Stack.Navigator initialRouteName="home" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="index" component={Index}/>
           <Stack.Screen name="news" component={News}/>
           <Stack.Screen name="details" component={Details}/>
         </Stack.Navigator>
