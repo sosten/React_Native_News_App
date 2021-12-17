@@ -8,6 +8,7 @@ import Adverts from "./Adverts";
 import NavBar from './Components/NavBar';
 import HomeScreen from './Screens/HomeScreen';
 import DetailsScreen from './Screens/DetailsScreen';
+import Spiner from './Components/Spiner';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ export default function App() {
           <Stack.Screen name="details" component={DetailsScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
+      <Spiner />
     </View>
   );
 }

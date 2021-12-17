@@ -12,7 +12,7 @@ const Details = ({route, navigation}) =>{
                     {NewsList.filter((item)=> item.id === ItemId).map((item)=>{
                         return( 
                             <View key={item.id} style={{height: Dimensions.get('screen').height,}}>
-                                <Entypo name="chevron-thin-left" size={26} color="black" style={styles.back_btn} onPress={()=>navigation.navigate('home')}/>
+                                <Entypo name="chevron-thin-left" size={26} color="red" style={styles.back_btn} onPress={()=>navigation.navigate('home')}/>
                                 <View style={styles.d_image}>
                                     <ImageBackground  source={item.avator} style={styles.d_bg} />
                                 </View>
@@ -50,8 +50,7 @@ const styles = StyleSheet.create({
     },
 
     back_btn: {
-        color: '#000',
-        backgroundColor: '#5555',
+        // backgroundColor: '#5555',
         width: '100%',
         flexDirection: 'row',
         zIndex:100,
