@@ -6,30 +6,33 @@ import { View, Text, SafeAreaView, StyleSheet, Image, ImageBackground,ScrollView
 const Details = ({route, navigation}) =>{
     const {ItemId} = route.params;
     return(
-        <SafeAreaView style={styles.d_wrapper} >
-            <ScrollView style={{height: "100%", flex: 1}} contentContainerStyle={{ flex: 1, paddingVertical:20 }} nestedScrollEnabled={true} scrollEnabled={true}>
-                <View style={{flex: 1}}>
-                    {NewsList.filter((item)=> item.id === ItemId).map((item)=>{
-                        return( 
-                            <View key={item.id} style={{height: Dimensions.get('screen').height,}}>
-                                <Entypo name="chevron-thin-left" size={26} color="red" style={styles.back_btn} onPress={()=>navigation.navigate('home')}/>
-                                <View style={styles.d_image}>
-                                    <ImageBackground  source={item.avator} style={styles.d_bg} />
+        <SafeAreaView style={styles.d_wrapper}>
+            <Entypo name="chevron-thin-left" size={26} color="red" style={styles.back_btn} onPress={()=>navigation.navigate('home')}/>
+            <View style={{flex: 1,}}>
+                {NewsList.filter((item)=> item.id === ItemId).map((item)=>{
+                    return(
+                        <View key={item.id} style={{ flex: 1}}>
+                            <ScrollView style={{ flex: 1 }}> 
+                                <View  style={{height: Dimensions.get('screen').height,}}>
+                                    <View style={styles.d_image}>
+                                        <ImageBackground  source={item.avator} style={styles.d_bg} />
+                                    </View>
+                                    <View style={styles.d_heading}>
+                                        <Text style={styles.d_cate}># {item.category}</Text>
+                                        <Text style={{fontSize: 24, fontWeight: "700",}}>{item.headline}</Text>
+                                    </View>
+                                    <View style={styles.d_cont}>
+                                        <Text style={{fontSize: 18,lineHeight: 25, color: "#111",}}>{item.content}</Text>   
+                                    </View>
+                                    <View>
+                                        <Text style={styles.d_reporter}>{item.reporter}</Text>
+                                    </View>
                                 </View>
-                                <View style={styles.d_heading}>
-                                    <Text style={{fontSize: 20, fontWeight: "700",}}>{item.headline}</Text>
-                                </View>
-                                <View style={styles.d_cont}>
-                                    <Text style={{fontSize: 16, color: "#111",}}>{item.content}</Text>   
-                                </View>
-                                <View>
-                                    <Text>{item.reporter}</Text>
-                                </View>
-                            </View>
-                        )
-                    })}
-                </View>  
-            </ScrollView>
+                            </ScrollView>
+                        </View>
+                    )
+                })}
+            </View>  
         </SafeAreaView>
     )
 }
@@ -42,19 +45,15 @@ const styles = StyleSheet.create({
     },
 
     d_bg: {
-        width: "100%",
-        height: "100%",
         resizeMode: "contain",
         flex: 1,
-        marginTop: -40,
     },
 
     back_btn: {
-        // backgroundColor: '#5555',
         width: '100%',
         flexDirection: 'row',
         zIndex:100,
-        marginTop: -25,
+        position: "absolute",
         paddingRight: 10,
         paddingLeft: 16,
         paddingTop: 20,
@@ -64,22 +63,28 @@ const styles = StyleSheet.create({
     d_image: {
         flexGrow:1,
         justifyContent: "center",
-        marginTop: -25,
-        backgroundColor: "rgba(0,0,0,0.9)",
         height: "50%",
     },
 
     d_heading: {
         padding: 20,
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: "flex-start",
         
     },
 
+    d_cate: {
+        color: "#999",
+        fontSize: 20,
+    },
+
     d_cont: {
-        alignItems: "center",
-        flexDirection: "column",
-        flexGrow: 1,
+        fontSize: 20,
+        alignItems: "flex-start",
+        padding: 20,
+    },
+
+    d_reporter: {
+        backgroundColor: "#5555",
         padding: 20,
     },
 })

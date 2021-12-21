@@ -11,14 +11,14 @@ const NavBar = ({navigation}) =>{
         <SafeAreaView style={styles.container} contentContainerStyle={{flexGrow: 1}}>
             <View style={styles.nav_wrapper}>
                 <Text><Icon onPress={()=>{displayCont===true ? setDisplayCont(true) : setDisplayCont(!false)}} name="bars" size={25} style={{color:"#fff"}} />
-                    <View style={{backgroundColor: "#fff", padding: 20,}} style={styles.displayNone}>
+                    {/* <View style={{backgroundColor: "#fff", padding: 20,}} style={styles.displayNone}>
                         <Text><Icon name="user" size={25} style={{color:"#fff",}} /></Text>
                         <Text style={{color: "#fff"}}>Sports</Text>
                         <Text>Business</Text>
                         <Text>Lifestyle</Text>
                         <Text>Politics</Text>
                         <Text>Technology</Text>
-                    </View>
+                    </View> */}
                 </Text>
                 <Text style={styles.tin} onPress={()=>navigation.navigate('home')}>Tinveleko News</Text>
                 <Octicons name="search" size={24} color="#fff" />

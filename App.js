@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import Adverts from "./Adverts";
 import NavBar from './Components/NavBar';
 import HomeScreen from './Screens/HomeScreen';
@@ -11,6 +12,7 @@ import Spiner from './Components/Spiner';
 import SportsScreen from './Screens/SportsScreen';
 
 const Stack = createNativeStackNavigator();
+const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (

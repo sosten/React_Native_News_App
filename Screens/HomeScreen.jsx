@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, FlatList, Image, Button, SafeAreaView, TouchableOpacity,} from "react-native";
+import { View, Text, StyleSheet, FlatList, Image, Button, SafeAreaView, TouchableOpacity, ScrollView} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Footer from "../Components/Footer";
 import NewsList from "../NewsList";
@@ -9,6 +9,7 @@ const itemSeparator = () => <View style={{height: 10,}}></View>
 const HomeScreen= ({navigation}) =>{
     return(
         <SafeAreaView style={{flex: 1, marginHorizontal: 20, alignItems: 'center', height: "100%"}}>
+            <ScrollView >
             <View style={styles.main_section}>
                 <Text style={{padding: 20,}} onPress={()=> navigation.navigate('sports')}>Sports</Text>
                 <FlatList
@@ -35,6 +36,7 @@ const HomeScreen= ({navigation}) =>{
                 />
                 <Footer />
             </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
