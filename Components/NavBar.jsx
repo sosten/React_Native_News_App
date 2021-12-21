@@ -7,19 +7,13 @@ import { Octicons } from '@expo/vector-icons';
 const NavBar = ({navigation}) =>{
     const [displayCont, setDisplayCont] = useState(false);
 
-    // const displayHidden=()=>{
-    //     if(displayCont === false){
-    //         setDisplayCont(true)
-    //         console.log('clicked');
-    //     }
-    // }
     return(
         <SafeAreaView style={styles.container} contentContainerStyle={{flexGrow: 1}}>
             <View style={styles.nav_wrapper}>
-                <Text onPress={()=>{displayCont===false ? setDisplayCont(true): setDisplayCont(!false)}}><Icon name="bars" size={25} style={{color:"#fff",}} />
-                    <View style={{backgroundColor: "#fff", padding: 20,}}>
-                        <Octicons name="search" size={24} color="black" />
-                        <Text>Sports</Text>
+                <Text><Icon onPress={()=>{displayCont===true ? setDisplayCont(true) : setDisplayCont(!false)}} name="bars" size={25} style={{color:"#fff"}} />
+                    <View style={{backgroundColor: "#fff", padding: 20,}} style={styles.displayNone}>
+                        <Text><Icon name="user" size={25} style={{color:"#fff",}} /></Text>
+                        <Text style={{color: "#fff"}}>Sports</Text>
                         <Text>Business</Text>
                         <Text>Lifestyle</Text>
                         <Text>Politics</Text>
@@ -27,7 +21,7 @@ const NavBar = ({navigation}) =>{
                     </View>
                 </Text>
                 <Text style={styles.tin} onPress={()=>navigation.navigate('home')}>Tinveleko News</Text>
-                <Text><Icon name="user" size={25} style={{color:"#fff",}} /></Text>
+                <Octicons name="search" size={24} color="#fff" />
             </View>
         </SafeAreaView>
     )
@@ -40,6 +34,10 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         marginTop: 25,
         alignItems:"center",
+    },
+
+    displayNone: {
+        display: "flex",
     },
 
     nav_wrapper: {

@@ -10,6 +10,7 @@ const HomeScreen= ({navigation}) =>{
     return(
         <SafeAreaView style={{flex: 1, marginHorizontal: 20, alignItems: 'center', height: "100%"}}>
             <View style={styles.main_section}>
+                <Text style={{padding: 20,}} onPress={()=> navigation.navigate('sports')}>Sports</Text>
                 <FlatList
                     data={NewsList} 
                     ItemSeparatorComponent={itemSeparator}

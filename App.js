@@ -3,12 +3,12 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import News from './News';
 import Adverts from "./Adverts";
 import NavBar from './Components/NavBar';
 import HomeScreen from './Screens/HomeScreen';
 import DetailsScreen from './Screens/DetailsScreen';
 import Spiner from './Components/Spiner';
+import SportsScreen from './Screens/SportsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +21,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="home" screenOptions={{ headerShown: false }}>
           <Stack.Screen name="home" component={HomeScreen}/>
-          <Stack.Screen name="news" component={News}/>
+          <Stack.Screen name="sports" component={SportsScreen}/>
           <Stack.Screen name="details" component={DetailsScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
